@@ -2,6 +2,7 @@
 public class Noeud {
 
 	private String val;
+	private boolean visite = false;
 	private Noeud filsGauche;
 	private Noeud filsDroite;
 	
@@ -27,6 +28,12 @@ public class Noeud {
 	public String getValNoeud(Noeud n){
 		if(n != null) return n.getVal();
 		return "";
+	}
+	public boolean isVisite() {
+		return visite;
+	}
+	public void setVisite(boolean visite) {
+		this.visite = visite;
 	}
 	
 }

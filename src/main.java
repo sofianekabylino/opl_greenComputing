@@ -13,6 +13,7 @@ public class main {
 		Noeud E = new Noeud();
 		Noeud F = new Noeud();
 		Noeud G = new Noeud();
+		Noeud Sou = new Noeud();
 		
 		A.setVal("A");
 		A.setFilsDroite(B);
@@ -27,7 +28,7 @@ public class main {
 		C.setFilsGauche(F);
 		
 		D.setVal("D");
-		D.setFilsDroite(null);
+		D.setFilsDroite(Sou);
 		D.setFilsGauche(null);
 
 		E.setVal("E");
@@ -47,8 +48,13 @@ public class main {
 		graphe.add(C);
 		graphe.add(D);
 		graphe.add(E);
-		graphe.add(F);
 		graphe.add(G);
+		graphe.add(F);
+		
+	}
+	
+	public void parcourLargeur(Graphe g, Noeud n){
+		
 	}
 	
 	public static void main (String[] args) {
@@ -56,8 +62,7 @@ public class main {
 		
 		Graphe g = new Graphe(graphe);
 		
-		g.affichage();
-		
+		g.parcoursLargeur(graphe.get(0));
 	}
 
 }
